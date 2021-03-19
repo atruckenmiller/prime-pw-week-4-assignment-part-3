@@ -2,46 +2,64 @@ console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
 
+// Create a global variable named basket and set it to an empty array
 var basket = [];
+
+// Create a function called addItem. It should: take an input parameter for a string item
+// add the new item to the global array basket. Return true indicating the item was added
+
 function addItem( item ){
-  basket.push();
-  basket.push('apples', 'strawberries', 'peaches', 'pears');
+  basket.push(item);
   return 'true';
 }
-console.log('The item was added to the basket:', addItem());
 
-// 2. Problem with list items
+console.log('Basket is${basket}');
+console.log('Adding apples', addItem('apples'));
+console.log('Adding strawberries', addItem('strawberries'));
+console.log('Adding peaches', addItem('peaches'));
+console.log('Adding pears', addItem('pears'));
+
+// 2. Create a function called listItems. It should:
+// loop over the items in the basket array. It should console.log each individual item on a new line
 function listItems(){
-  for(x=0; x=basket.length; x++);
-}
 for (let item of basket){
-  console.log('The items in the basket are: ', item)
+  console.log('The items in the basket are: ', item);
+  }
 }
+listItems();
 
-console.log(-let function Empty)
 
-// 3. Problem with function empty
+// 3. Problem to put in an empty array.
 function empty(){
-  for(var basket = basket.length-0; basket > 0; basket--)
-  items.pop('apples', 'strawberries', 'peaches', 'pears');
+  basket = [];
 }
-console.log('Reset basket:', basket);
-  const maxItems = 5;
-  let isFull = 0;
+empty();
+console.log('Empty the basket:', basket);
 
-// 4. Stretch Goals.
-function full(){
-  if ( maxItems > 5 ){
-    return true;
-  }
-    if (maxItems < 5){
-    return false;
-  }
-}
-console.log('isFull- should say true:', full());
-console.log('isFull- Is not full should say false:', full());
 
-// 5. Stretch Goals Remove Item.
-// function removeItem( item ){
-//   const item = basket.indexof()
+
+// 4. (Stretch Goals)
+//Add a global const named maxItems and set it to 5.
+//Create a function called isFull(). It should:return false if the basket contains less than max number of items
+// return true otherwise (equal or more than maxItems) Update the required addItem function to:
+// Use the isFull function to prevent more than maxItems from being added to the basket.If an item was added to the array, return true
+// If there was no room and the item could not be added return false
+
+// const maxItems = 5;
+//
+// function isFull(){
+//   if ( maxItems > 5 ){
+//     return true;
+//   }
+//     if (maxItems < 5){
+//     return false;
+//   }
 // }
+// function addItem()
+//
+// console.log('isFull- should say true:', isFull());
+// console.log('isFull- Is not full should say false:',isFull());
+
+// 5. Stretch Goals
+// Create a function called removeItem. It should: Take an input parameter for a string item.Use Array.indexOf to find the index of the first matching item in the basket.
+// Use Array.splice to remove the first matching item from the basket. Return the item removed or null if the item was not found
