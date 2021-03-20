@@ -44,6 +44,16 @@ console.log('Empty the basket:', basket);
 // return true otherwise (equal or more than maxItems) Update the required addItem function to:
 // Use the isFull function to prevent more than maxItems from being added to the basket.If an item was added to the array, return true
 
+const maxItems = 5;
+
+function isFull(basket){
+  if (basket >= maxItems){
+    return true;
+  } {
+    return false;
+  }
+}
+console.log('Is the basket full?', isFull()); // Explanation of code: There are only 4 items in the basket for me, and the max is 5, so thats why it returned false.
 
 // 5. Stretch Goals
 // Create a function called removeItem. It should: Take an input parameter for a string item.Use Array.indexOf to find the index of the first matching item in the basket.
