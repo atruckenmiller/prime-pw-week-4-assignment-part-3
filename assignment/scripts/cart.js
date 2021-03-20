@@ -9,10 +9,11 @@ var basket = [];
 // add the new item to the global array basket. Return true indicating the item was added
 
 function addItem( item ){
-  basket.push(item);
+  basket.push(item); // used basket push item to add items in basket.
   return 'true';
 }
 
+// explanation: list of items for basket
 console.log('Basket is${basket}');
 console.log('Adding apples', addItem('apples'));
 console.log('Adding strawberries', addItem('strawberries'));
@@ -23,19 +24,18 @@ console.log('Adding pears', addItem('pears'));
 // loop over the items in the basket array. It should console.log each individual item on a new line
 function listItems(){
 for (let item of basket){
-  console.log('The items in the basket are: ', item);
+  console.log('The items in the basket are:', item);
   }
 }
-listItems();
 
+listItems(); // logs out each individual item.
 
 // 3. Problem to put in an empty array.
 function empty(){
-  basket = [];
+  basket = []; // empty array for basket.
 }
 empty();
 console.log('Empty the basket:', basket);
-
 
 
 // 4. (Stretch Goals)
@@ -43,22 +43,7 @@ console.log('Empty the basket:', basket);
 //Create a function called isFull(). It should:return false if the basket contains less than max number of items
 // return true otherwise (equal or more than maxItems) Update the required addItem function to:
 // Use the isFull function to prevent more than maxItems from being added to the basket.If an item was added to the array, return true
-// If there was no room and the item could not be added return false
 
-// const maxItems = 5;
-//
-// function isFull(){
-//   if ( maxItems > 5 ){
-//     return true;
-//   }
-//     if (maxItems < 5){
-//     return false;
-//   }
-// }
-// function addItem()
-//
-// console.log('isFull- should say true:', isFull());
-// console.log('isFull- Is not full should say false:',isFull());
 
 // 5. Stretch Goals
 // Create a function called removeItem. It should: Take an input parameter for a string item.Use Array.indexOf to find the index of the first matching item in the basket.
